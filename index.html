@@ -855,6 +855,7 @@
          * Zeigt das Overlay mit der gezogenen Karte an
          * @param {Object} card - Die anzuzeigende Karte
          * @param {string} packType - Typ des geöffneten Packs
+         *  title.textContent = `Aus dem ${packType} Pack: ${card.name}`;
          */
         function showOverlay(card, packType) {
             // Overlay-Inhalt leeren
@@ -862,7 +863,7 @@
 
             // Titel anpassen
             const title = document.getElementById('cards-title');
-            title.textContent = `Aus dem ${packType} Pack: ${card.name}`;
+            title.textContent = `Aus dem ${packType} Pack:`;
 
             // Karten-Element erstellen
             const cardElement = createCardElement(card);
