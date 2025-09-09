@@ -351,7 +351,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 15px;
+            margin-bottom: 2rem;
             /* border: 3px solid rgba(168, 85, 247, 0.6); */
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             position: relative;
@@ -359,7 +359,23 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            
+
+            opacity: 0;
+             transform: scale(0.95);
+             animation: delayedFadeIn 0.5s ease-in 0.05s forwards;
         }
+
+                  @keyframes delayedFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
         /* Fallback for when image doesn't load */
           /*
